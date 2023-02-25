@@ -18,8 +18,8 @@ assessmentButton.onclick=()=>{
 resultDivided.innerText='';
 
 //headerDividedの作成
-const headerDIVIded=document.createElement('div');
-headerDIvided.setAttribute('class','card-header');
+const headerDivided=document.createElement('div');
+headerDivided.setAttribute('class','card-header');
 headerDivided.innerText='診断結果';
 
 //bodyDividedの作成
@@ -30,9 +30,13 @@ const paragraph=document.createElement('p');
 paragraph.setAttribute('class','card-text');
 const result=assessment(userName);
 paragraph.innerText=result;
-bodyDivided.appenChild(paragraph);
+bodyDivided.appendChild(paragraph);
 
 //resultDividedにBooststrapのスタイル
+resultDivided.setAttribute('class','card');
+resultDivided.setAttribute('style','max-width: 700px;')
+
+//headerDividedとbodyDividedをresultDividedに差し込む
 resultDivided.appendChild(headerDivided);
 resultDivided.appendChild(bodyDivided);
 
