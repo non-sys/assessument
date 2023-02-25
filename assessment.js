@@ -16,15 +16,25 @@ assessmentButton.onclick=()=>{
     
 //診断結果
 resultDivided.innerText='';
-const header=document.createElement('h3');
-header.innerText='診断結果';
-resultDivided.appendChild(header);
+
+//headerDividedの作成
+const headerDIVIded=document.createElement('div');
+headerDIvided.setAttribute('class','card-header');
+headerDivided.innerText='診断結果';
+
+//bodyDividedの作成
+const bodyDivided=document.createElement('div');
+bodyDivided.setAttribute('class','card-body');
 
 const paragraph=document.createElement('p');
+paragraph.setAttribute('class','card-text');
 const result=assessment(userName);
 paragraph.innerText=result;
-resultDivided.appendChild(paragraph);
+bodyDivided.appenChild(paragraph);
 
+//resultDividedにBooststrapのスタイル
+resultDivided.appendChild(headerDivided);
+resultDivided.appendChild(bodyDivided);
 
 //ツイートエリア
 tweetDivided.innerText='';
@@ -97,5 +107,7 @@ console.assert(
         '太郎のいいところは決断力です。太郎がする決断にいつも助けられる人がいます。',
         '診断結果の文言の特定の部分を名前に置き換える処理が正しくありません。'
     );
+    
+    
     
     
