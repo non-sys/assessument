@@ -1,0 +1,16 @@
+body{
+    background-color: #ffd499;
+    color:#ea9013;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+ 
+ 
+  .class2 {
+    position: absolute;
+    top: 350px;
+    left: 700px;
+    width: 250px;
+    height: 100px;
+  }
